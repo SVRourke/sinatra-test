@@ -6,7 +6,10 @@ class App < Sinatra::Base
     end
 
     get '/results' do
-        "this is the results page"
+        ix = DataInterface.new('AngmDMbjxfx9GEcQ2kDDTwtk')
+        @data = ix.getPage(page = 1)
+        puts @data[:products][0]['url']
+        erb :results
     end
 
 end
