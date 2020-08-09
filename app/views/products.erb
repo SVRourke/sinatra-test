@@ -1,15 +1,15 @@
-
-<% @data[:products].each do |product| %>
-    <section class="product-card">
-                <img src="<%= product['image'] %>" alt="Product Image">
-                <h3 class="product-title-visible"><%= product['name'] %></h3>
-                <p class="product-savings-visible">$<%= product['dollarSavings'] %> off</p>
+<div class="row">
+    <% @data[:products].each do |product| %>
+        <div class="col-md-4 col-lg-2">
+            <div class="card">
+                <img class="img-thumbnail img-fluid" src="<%= product['image'] %>" alt="Product Image">
+                <span ><%= product['name'] %></span>
                 <span>SKU: <%= product['sku'] %></span>
-                <a href="<%= product['url'] %>">Buy Now</a>
-                <p>Average Customer Review: <%= product['customerReviewAverage'] %></p>
-                <p>Last Price Changed: <%= product['priceUpdateDate'] %></p>
-                <p>Current Price: $<%= product['salePrice'] %></p>
-                <p>Savings: $<%= product['dollarSavings'] %></p>
-
-    </section>
-<% end %>
+                <span>Avg Review: <%= product['customerReviewAverage'] %></span>
+                <p>Last Price Change: <%= product['priceUpdateDate'] %></p>
+                <p>Price: $<%= product['salePrice'] %></p>
+                <a class="btn" href="<%= product['url'] %>">-$<%= product['dollarSavings'].to_i %></a>
+            </div>
+        </div>
+    <% end %>
+</div>

@@ -1,13 +1,51 @@
-<div class="bar">
-    <form action="get">
-            <label for=""></label>
-            <select name="pageSize" id="pageSize">
-                <option value="">10</option>
-                <option value="">20</option>
-                <option value="">30</option>
-                <option value="">50</option>
-                <option value="">100</option>
-            </select>
-            <button class="button" type="submit">Filter</button>
-    </form>
-</div>
+<nav>
+<form action="/page" method="post">
+        <select name="pageSize" id="pageSize">
+            <option value="">Results/Page</option>
+            <option value="">10</option>
+            <option value="">20</option>
+            <option value="">30</option>
+            <option value="">50</option>
+            <option value="">100</option>
+        </select>
+
+        <select name="salePrice" id="salePrice">
+            <option value="">Select Price:</option>
+            <option value="">$ < $10</option>
+            <option value="">$ < $15</option>
+            <option value="">$ < $50</option>
+            <option value="">$ < $100</option>
+            <option value="">$ > $100</option>
+        </select>
+
+        <select name="customerReviewAverage" id="">
+            <option value="">Filter Rating:</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4.5</option>
+            <option value="=\5">5</option>
+        </select>
+
+        <select name="customerReviewCount" id="">
+            <option value="">Review Count</option>
+            <option value="">100-200</option>
+            <option value="">200-500</option>
+            <option value="">1000+</option>
+        </select>
+
+        <select name="inStorePickup" id="">
+
+            <option value="">In Store/Online</option>
+            <option value="">Available In Store</option>
+            <option value="">Online Only</option>
+        </select>
+
+        <button class="btn" type="submit">Filter</button>
+</form>
+</nav>
+
+
+<%# 
+&=true
+&digital=false %>
