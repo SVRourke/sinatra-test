@@ -1,14 +1,14 @@
 <nav>
     <% if @data[:page] > 1 %>
-        <a href="/page/1">first page</a>
-        <a href="/page/<%= @data[:page] - 1 %>"><%= @data[:page] - 1 %></a>    
+        <a href="/pages/1">first page</a>
+        <a href="/pages/<%= @data[:page] - 1 %>"><%= @data[:page] - 1 %></a>    
     <% end %>
 
 
-    <a href="/page/<%= @data[:page] %>"><%= @data[:page] %></a>    
+    <a href="/pages/<%= @data[:page] %>"><%= @data[:page] %></a>    
 
     <% if @data[:page] != @data[:pages] %>
-        <a href="/page/<%= @data[:page] + 1  %>"><%= @data[:page] + 1 %></a>    
-        <a href="/page/<%= @data[:pages]%>">Last page</a>
+        <a href="/pages/<%= @data[:page] + 1  %>"><%= @data[:page] + 1 %></a>    
+        <a href="/pages/<%= @data[:pages]%>">Last page</a>
     <% end %>
 </nav>

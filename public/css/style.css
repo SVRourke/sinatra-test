@@ -1,0 +1,11 @@
+.cic {
+    height: 30vh;
+}
+.card-img-top {
+    max-height: 90%;
+    max-width: 60%;
+    margin: 0 auto;
+}
+.card {
+    width: 80%;
+}
