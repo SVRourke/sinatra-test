@@ -12,7 +12,7 @@
 class DataInterface
     def initialize(key = '')
         @key = key
-        @display = "name,url,customerReviewAverage,priceUpdateDate,salePrice,dollarSavings,sku,largeFrontImage"
+        @display = "name,url,customerReviewAverage,priceUpdateDate,salePrice,dollarSavings,sku,image"
         @base = "https://api.bestbuy.com/v1/products(customerReviewAverage>4&customerReviewCount>100&onSale=true)"
     end
     

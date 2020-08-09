@@ -1,15 +1,17 @@
 require_relative './../config/environment.rb'
 
 class App < Sinatra::Base
-    get '/' do
-        "this is the search page"
+
+    get '/page' do
+        redirect to('/page/1')
     end
 
-    get '/results' do
+
+     get '/page/:num' do
         ix = DataInterface.new('AngmDMbjxfx9GEcQ2kDDTwtk')
-        @data = ix.getPage(page = 1)
-        puts @data[:products][0]['url']
-        erb :results
+        @data = ix.getPage(page = params[:num])
+        erb :layout
     end
+
 
 end

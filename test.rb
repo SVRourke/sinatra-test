@@ -11,7 +11,7 @@ base = "https://api.bestbuy.com/v1/products(customerReviewAverage>4&customerRevi
 class DataInterface
     def initialize(key = '')
         @key = key
-        @display = "name,url,customerReviewAverage,priceUpdateDate,salePrice,dollarSavings,sku"
+        @display = "name,url,customerReviewAverage,priceUpdateDate,salePrice,dollarSavings,sku,manufacturer"
         @base = "https://api.bestbuy.com/v1/products(customerReviewAverage>4&customerReviewCount>100&onSale=true)"
     end
     
