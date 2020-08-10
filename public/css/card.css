@@ -1,0 +1,8 @@
+.product_card {
+    width: 20%;
+    /* margin:%; */
+}
+.product_image {
+    max-width: 60%;
+    max-height: 60%;
+}

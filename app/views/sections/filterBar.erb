@@ -1,50 +1,52 @@
 <nav>
-<form action="/filter" method="post">
+    <form action="/filter" method="post">
+        <label for="pageSize">Results/Page</label>
         <select name="pageSize" id="pageSize">
-            <option value="20">Results/Page</option>
+            <option value="<%= session[:filters]["pageSize"] %>">Products/Page</option>
             <option value="10">10</option>
             <option value="20">20</option>
             <option value="30">30</option>
             <option value="50">50</option>
             <option value="100">100</option>
-        </select>
-
+            </select>
+    
+        <label for="salePrice">Price</label>
         <select name="salePrice" id="salePrice">
-            <option value="<=100">Select Price:</option>
+            <option value="<%= session[:filters]["salePrice"] %>">Select Price:</option>
             <option value="<=10">$ < $10</option>
             <option value="<=15">$ < $15</option>
             <option value="<=50">$ < $50</option>
             <option value="<=100">$ < $100</option>
             <option value=">=100">$ > $100</option>
-        </select>
+            </select>
 
+        
+        <label for="customerReviewAverage">Avg. Review</label>
         <select name="customerReviewAverage" id="">
-            <option value="=5">Filter Rating:</option>
+            <option value="<%= session[:filters]["customerReviewAverage"] %>">Filter Rating:</option>
             <option value="=1">1</option>
             <option value=">=2">2</option>
             <option value=">=3">3</option>
             <option value=">=4.5">4.5</option>
             <option value="=5">5</option>
-        </select>
+            </select>
 
+        <label for="customerReviewCount">Rev. Count</label>
         <select name="customerReviewCount" id="">
-            <option value=">=100">Review Count</option>
+            <option value="<%= session[:filters]["customerReviewCount"] %>">Review Count</option>
             <option value=">=100">100+</option>
             <option value=">=200">200+</option>
             <option value=">=1000">1000+</option>
-        </select>
-
+            </select>
+        
+        <label for="inStorePickup">In-Store/Online</label>
         <select name="inStorePickup" id="">
-            <option value="=true">In Store/Online</option>
+            <option value="<%= session[:filters]["inStorePickup"] %>">In Store/Online</option>
             <option value="=true">Available In Store</option>
             <option value="=false">Online Only</option>
-        </select>
+            </select>
 
-        <button class="btn" type="submit">Filter</button>
-</form>
+        <button class="" type="submit">Filter</button>
+    </form>
 </nav>
 
-
-<%# 
-&=true
-&digital=false %>

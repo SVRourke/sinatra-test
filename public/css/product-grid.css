@@ -1,0 +1,9 @@
+main {
+    max-width: 100%;
+    grid-column: 2 / 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}

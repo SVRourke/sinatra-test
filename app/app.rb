@@ -13,7 +13,6 @@ class App < Sinatra::Base
     end
 
     post '/filter' do 
-        
         session[:filters] = params
         redirect to('/pages/1')
     end

@@ -1,0 +1,13 @@
+header {
+    height: 15vh;
+    background-color: rgb(48, 48, 148);
+    grid-column: 1 / span 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+header > h1 {
+    color: white;
+    font-size: 3em;
+    letter-spacing: 1px;
+}

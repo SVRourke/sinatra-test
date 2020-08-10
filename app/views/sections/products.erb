@@ -1,0 +1,13 @@
+<main>
+    <% @data[:products].each do |product| %>
+        <div class="product_card">
+            <img class="product_image" src="<%= product['image'] %>" alt="Product Image">
+            <p><%= product['name'] %></p>
+            <span>SKU: <%= product['sku'] %></span>
+            <span><%= product['customerReviewAverage'] %> stars avg.</span>
+            <p>Last Change: <%= product['priceUpdateDate'].split("T")[0] %></p>
+            <p>Price: $<%= product['salePrice'] %> / $<%= product['dollarSavings'].to_i %> Off</p>
+            <a class="btn btn-primary" href="<%= product['url'] %>">Buy Now</a>
+        </div>
+    <% end %>
+</main>
