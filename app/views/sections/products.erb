@@ -1,43 +1,21 @@
-<main>
-    <% @data[:products].each do |product| %>
-        <!-- <div class="product_card"> -->
-        <!--     <img class="product_image" src="<%= product['image'] %>" alt="Product Image"> -->
-        <!--     <p><%= product['name'] %></p> -->
-        <!--     <span>SKU: <%= product['sku'] %></span> -->
-        <!--     <span><%= product['customerReviewAverage'] %> stars avg.</span> -->
-        <!--     <p>Last Change: <%= product['priceUpdateDate'].split("T")[0] %></p> -->
-        <!--     <p>Price: $<%= product['salePrice'] %> / $<%= product['dollarSavings'].to_i %> Off</p> -->
-        <!--     <a class="btn btn-primary" href="<%= product['url'] %>">Buy Now</a> -->
-        <!-- </div> -->
-
-        <section class="card">
-            <div class="image-container">
-                <img class="card-image" src="<%= product['image'] %>" alt="">
-            </div>
-
-            <div class="card-content">
-                <h3 class="product-title">
-                    <%= product['name'] %>
-                </h3>
-
-                <p class="product-sku">
-                SKU: <%= product['sku'] %>
-                </p>
-
-                <p class="product-stars">
-                    <%= product['customerReviewAverage'] %> stars avg.
-                </p>
-
-                <p class="date">
-                    Last Change: <%= product['priceUpdateDate'].split("T")[0] %>
-                </p>
-
-                <p class="pricing">
-                    Price: $<%= product['salePrice'] %> / $<%= product['dollarSavings'].to_i %> Off
-                </p>
-
-                <a class="buy-now" href="<%= product['url'] %>">Buy Now</a>
-            </div>
-        </section>
-    <% end %>
-</main>
+<section class="product-grid_container">
+    <div class="product-grid">
+        <% @data[:products].each do |product| %>
+            <section class="grid-item">
+                <div class="card">
+                    <div class="image-container">
+                        <img class="card-image" src="<%= product['image'] %>" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="product-title"><%= product['name'] %></h3>
+                        <p class="product-sku">SKU: <%= product['sku'] %></p>
+                        <p class="product-stars"><%= product['customerReviewAverage'] %> stars avg.</p>
+                        <p class="date">Last Change: <%= product['priceUpdateDate'].split("T")[0] %></p>
+                        <p class="pricing">Price: $<%= product['salePrice'] %> / $<%= product['dollarSavings'].to_i %> Off</p>
+                        <a class="buy-now" href="<%= product['url'] %>">Buy Now</a>
+                    </div>
+                </div>
+            </section>
+        <% end %>
+    </div>
+</section>

@@ -1,35 +1,24 @@
 @import "/css/resets.css";
 @import "/css/layout.css";
+@import "/css/card.css";
 @import "/css/header.css";
 @import "/css/product-grid.css";
-@import "/css/card.css";
-/* 
-body {
-    display: grid;
-    grid-template-columns:15% 80% 5%;
-    grid-template-rows:20% min-max(100vh, auto) 10%;
-    background-color: bisque;
+@import "/css/variables.css";
+
+/* RESETS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
- */
-/* 
-nav {
-    grid-column: 1 / span 1;
-    grid-row-start: 2;
-    grid-row-end: 3;
-} */
-
-
-
-/* footer {
-    background-color: white;
-    grid-column: 1 / span 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    padding-bottom: 10%; */
-/* } */
-
-/* .product_card {
-    width: 20%;
-    display: inline;
-} */
+/* VARIABLES */
+:root {
+    --color-main-blue: #0046be;
+    --color-accent-yellow: #fdee15;
+    --color-main-off-white: #f4f6f9;
+    --color-sale-red: #bb0628;
+    --color-dark-blue: #0457c8;
+    --color-offblue: #035ea6;
+    --color-text-black: #1d252c;
+} 
