@@ -6,14 +6,15 @@
                     <div class="image-container">
                         <img class="card-image" src="<%= product['image'] %>" alt="">
                     </div>
+                        <span class="pricing-overlay">$<%= product['dollarSavings'].to_i %> OFF</span>
                     <div class="card-content">
-                        <h3 class="product-title"><%= product['name'] %></h3>
+                        <p class="product-title"><%= product['name'] %></p>
                         <p class="product-sku">SKU: <%= product['sku'] %></p>
                         <p class="product-stars"><%= product['customerReviewAverage'] %> stars avg.</p>
                         <p class="date">Last Change: <%= product['priceUpdateDate'].split("T")[0] %></p>
-                        <p class="pricing">Price: $<%= product['salePrice'] %> / $<%= product['dollarSavings'].to_i %> Off</p>
-                        <a class="buy-now" href="<%= product['url'] %>">Buy Now</a>
+                        <p class="pricing">Price: $<%= product['salePrice'] %></p>
                     </div>
+                        <a class="buy-now" href="<%= product['url'] %>">Buy Now</a>
                 </div>
             </section>
         <% end %>

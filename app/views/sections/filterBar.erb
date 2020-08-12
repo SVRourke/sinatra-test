@@ -1,4 +1,4 @@
-<nav>
+<div class="filter-container">
     <form action="/filter" method="post">
         <label for="pageSize">Results/Page</label>
         <select name="pageSize" id="pageSize">
@@ -9,7 +9,7 @@
             <option value="50">50</option>
             <option value="100">100</option>
             </select>
-    
+
         <label for="salePrice">Price</label>
         <select name="salePrice" id="salePrice">
             <option value="<%= session[:filters]["salePrice"] %>">Select Price:</option>
@@ -46,7 +46,6 @@
             <option value="=false">Online Only</option>
             </select>
 
-        <button class="" type="submit">Filter</button>
+        <button class="filter_button" type="submit">Filter</button>
     </form>
-</nav>
-
+</div>

@@ -1,16 +1,11 @@
-@import "/css/resets.css";
 @import "/css/layout.css";
 @import "/css/card.css";
 @import "/css/header.css";
 @import "/css/product-grid.css";
 @import "/css/variables.css";
+@import "/css/sidebar.css";
 
-/* RESETS */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
 
 /* VARIABLES */
 :root {
@@ -22,3 +17,10 @@
     --color-offblue: #035ea6;
     --color-text-black: #1d252c;
 } 
+/* RESETS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--color-text-black)
+}
