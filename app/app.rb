@@ -3,6 +3,7 @@ require_relative './../config/environment.rb'
 class App < Sinatra::Base
     enable :sessions
     set :session_secret, 'secret sauce'
+    set :static, true
 
     get '/' do
         redirect to('/pages/1')
